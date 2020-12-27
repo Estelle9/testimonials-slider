@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body,
+.main,
+.main-container {
+    height: 100%;
+}
+
+body {
+    background: url(./images/pattern-bg.svg), url(./images/pattern-curve.svg);
+    background-position: center 8%, bottom left;
+    background-repeat: no-repeat;
+    background-size: 90%, 80%;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+}
+
+.container__slide {
+    display: flex;
+    flex-direction: column;
+    max-width: 50em;
+    margin: 0 auto;
+}
+
+.profile__slide {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    margin: 4em auto 3.5em;
+    padding: 0 2em;
+}
+
+.img {
+    border-radius: 0.5em;
+    width: 100%;
+    box-shadow: 0 5em 6em -2.5em rgba(36, 36, 113, 0.4);
+}
+
+.profile__review {
+    background-image: url(./images/pattern-quotes.svg);
+    background-position: top 0 left 50%;
+    background-repeat: no-repeat;
+    background-size: 3.75em 2.8em;
+    padding: 1.5em 2em 0;
+    text-align: center;
+}
+
+.review {
+    margin-bottom: 1.5em;
+    font-size: 1.1em;
+    font-weight: 300;
+}
+
+.name {
+    font-weight: 700;
+}
+
+.title {
+    color: hsl(240, 18%, 77%);
+}
+
+.profile--button {
+    position: absolute;
+    background: white;
+    border: none;
+    border-radius: 3em;
+    display: flex;
+    justify-content: space-around;
+    width: 5em;
+    height: 2.5em;
+    left: 50%;
+    bottom: 0.2em;
+    z-index: 1;
+    transform: translate(-50%, 50%);
+}
+
+button {
+    align-self: center;
+    border: none;
+    box-shadow: 0 1.5em 2em -1.5em rgba(36, 36, 113, 0.1);
+    outline: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.5;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 768px) {
+    body {
+        background-size: auto, auto;
+        background-position: top 6.5em right 5em, bottom left;
+    }
+    
+    .main-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .profile__slide {
+        margin: 4.5em auto 7em;
+    }
+
+    .profile__review {
+        padding: 1.5em 4.5em 0;
+    }
+}
+
+@media (min-width: 1280px) {
+    .container__slide {
+        padding: 0;
+        flex-direction: row-reverse;
+        align-items: center;
+        max-width: 80em;
+    }
+
+    .profile__slide {
+        margin: 0;
+        max-width: 50em;
+        margin-left: -6.5rem;
+    }
+
+    .img {
+        width: 35em;
+        margin-right: 4em;
+    }
+
+    .profile--button {
+        left: 25%;
+        bottom: 0.4em;
+    }
+
+    .profile__review {
+        background-position: top 0 left 5.5em;
+        background-size: auto;
+        text-align: left;
+        margin-left: 4em;
+        padding: 4.5em 0 0 0;
+        z-index: 1;
+    }
+
+    .review {
+        font-size: 2em;
+    }
+
+    .author-name {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .name,
+    .title {
+        font-size: 1.5em;
+    }
+
+    .name {
+        margin-right: 0.5em;
+    }
+}
