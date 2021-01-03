@@ -89,6 +89,7 @@ button {
     outline: none;
     background-color: white;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 button:hover {
